@@ -18,6 +18,17 @@
     th {
       text-align: left;
     }
+    table {
+      counter-reset: rowNumber;
+    }
+    table tr:not(:first-child)::before {
+      display: table-cell;
+      counter-increment: rowNumber;
+      content: counter(rowNumber) ".";
+      padding-right: 0.3em;
+      text-align: right;
+      vertical-align: bottom;
+    }
   </style>
 </head>
 
@@ -34,6 +45,7 @@
   <table style="width:100%">
     <caption><b>This outlines the connection from Ruth Montgomery to myself.</b></caption>
     <tr>
+      <th> </th>
       <th>First Name</th>
       <th>Last Name</th>
       <th>Maiden Name</th>
