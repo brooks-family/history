@@ -4,24 +4,91 @@
 
 <head>
     <title>Brooks Family History Home Page</title>
+	<div style="position: absolute; bottom: 5px;">
+		<div>
+			<p>Is there something incorrect or missing?  Please let me know by filling out an issue report by following <a href=https://github.com/brooks-family/history/issues>this link</a> to the home of the code base.  If you don't have an account already you will need to make a github account, but fear not because they are free!  Thanks!</p>
+		</div>
+	</div>
+	<style>
+    h1 {color:#0b4223;}
+    h3 {color:green;}
+    p {color:blue;}
+<!--    table, th, td {-->
+<!--      border: 1px solid black;-->
+<!--      border-collapse: collapse;-->
+<!--    }-->
+<!--    th, td {-->
+<!--      padding: 5px;-->
+<!--    }-->
+    th {
+      text-align: left;
+    }
+    table {
+      counter-reset: rowNumber;
+    }
+    table tr:not(:first-child)::before {
+      display: inline;
+      counter-increment: rowNumber;
+      content: counter(rowNumber) ".";
+      padding-right: 0.3em;
+      text-align: right;
+<!--      vertical-align: bottom;-->
+    }
+    .wrap {
+	}
+    </style>
+
 </head>
 
 <body style="background-color:#fde9b0;">
-	<img src="images/Brooks_Crest.png" alt="Family crest image" height="466" width="533" align="right"><br>
-	<b>Welcome to the home page of Brooks family history.</b><br>
-	<p>Below are the collection of historical documents I have collected over time.</p>
-        <ol>	
-	    <li><a href="charles_brooks_letters">Letters from Charles Brooks during WWII</a></li>
-	    <li><a href="genealogy">Family genealogy documents</a></li>
-	    <li><a href="montgomery">Montgomery history and society documents</a></li>
-	    <li><a href="sexton">Sexton family documents</a></li>
-	    <li><a href="veterans">Family veterans</a></li>
-	</ol><br>
+	<img src="images/Brooks_Crest.png" alt="Family crest image" height="466" width="533" align="right">
+	<h1>Welcome to the home page of Brooks family history.</h1>
+	<h3>This page and it's child pages are written and maintained by myself, Andy Brooks.  When my father passed away early 2019 I received his collection of family history documents.  From there I have been able to supplement that collection with many other findings across the web and from reaching out to some extremely helpful librarians.  In the pages beyond, the reader will find a variety of family information along various family lines.</h3>
+		<ol>
+		<li><a href="charles_brooks_letters">Letters from Charles Brooks during WWII</a></li>
+		<li><a href="genealogy">Family genealogy documents</a></li>
+		<li><a href="montgomery">Montgomery history and society documents</a></li>
+		<li><a href="sexton">Sexton family documents</a></li>
+		<li><a href="veterans">Family veterans</a></li>
+	</ol>
 
-	<p>Is there something incorrect or missing?  Please let me know by filling out an issue report at the link below.  If you don't have one already you will need to make a github account, but fear not because they are free!  Thanks!</p>
-	<a href=https://github.com/brooks-family/history/issues>Report issue here</a> 
+	<table style="float:left; margin-right:10px;" border="5px">
+		<caption><b>Below is a simple table of me and my children for reference.</b></caption>
+		<tr>
+			<th> </th>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Note</th>
+		</tr>
+		<tr>
+			<td>Andrew</td>
+			<td>Brooks</td>
+			<td>Parents: Daniel Brooks and Marlene Brooks</td>
+		</tr>
+		<tr>
+			<td>Annikah</td>
+			<td>DuBois</td>
+			<td>Mother: Katie DuBois</td>
+		</tr>
+		<tr>
+			<td>Gavin</td>
+			<td>DuBois</td>
+			<td>Mother: Katie DuBois</td>
+		</tr>
+		<tr>
+			<td>Audrey</td>
+			<td>Brooks</td>
+			<td>Mother: Samantha Brooks</td>
+		</tr>
+		<tr>
+			<td>Abigail</td>
+			<td>Brooks</td>
+			<td>Mother: Samantha Brooks</td>
+		</tr>
 </body>
-<div id="CSVSource">
-</div>
+<body>
+<p class="footer"></p><br>
+
+</body>
 
 </html>
