@@ -7,6 +7,27 @@
         h1 {color:#0b4223;}
         h3 {color:green;}
         p {color:blue;}
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+        th, td {
+          padding: 5px;
+        }
+        th {
+          text-align: left;
+        }
+        table {
+          counter-reset: rowNumber;
+        }
+        table tr:not(:first-child)::before {
+          display: table-cell;
+          counter-increment: rowNumber;
+          content: counter(rowNumber) ".";
+          padding-right: 0.3em;
+          text-align: right;
+          vertical-align: bottom;
+        }
     </style>
 </head>
 <body style="background-color:#fcff85;">
@@ -22,5 +43,96 @@
     <li><a href="https://www.findagrave.com/memorial/86904735/john-haymond" target="_blank">John Haymond page on findagrave.com</a></li>
     <li><a href="https://www.geni.com/people/Col-John-Haymond/6000000007014302296" target="_blank">John Haymond page on geni.com</a></li>
 </ol>
+<table>
+<tr>
+    <th> </th>
+    <th>Title</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Maiden Name</th>
+    <th>Note</th>
+    <th>Spouse</th>
+</tr>
+<tr>
+    <td>Major, USA</td>
+    <td>William</td>
+    <td>Haymond</td>
+    <td></td>
+    <td>Son of John Haymond and Margaret Haymond</td>
+    <td>Cassandra Clelland</td>
+</tr>
+<tr>
+    <td>Colonel, USA</td>
+    <td>John</td>
+    <td>Haymond</td>
+    <td></td>
+    <td>Son of William Haymond, Major, USA, French Indian War and Revolutionary War and Cassandra Clelland</td>
+    <td>Mary Wilson, Daughter of Ben Wilson, Colonel, USA, Revolutionary War</td>
+</tr>
+<tr>
+    <td>Mrs.</td>
+    <td>Cassandra</td>
+    <td>Bond</td>
+    <td>Haymond</td>
+    <td>Daughter of John Haymond, Colonel, USA, Indian Wars of post Revolution and Mary Wilson</td>
+    <td>Thomas Bond</td>
+</tr>
+<tr>
+    <td>Mrs.</td>
+    <td>Almerine Cassandra</td>
+    <td>Clarke</td>
+    <td>Bond</td>
+    <td>Daughter of Cassandra Bond Haymond and Thomas Bond</td>
+    <td>Dr. Haymond William Clarke, Major, USA, Civil War</td>
+</tr>
+<tr>
+    <td>Mr.</td>
+    <td>William Haymond</td>
+    <td>Clarke</td>
+    <td></td>
+    <td>Son of Almerine Cassandra Clarke and Dr. Haymond William Clarke (Civil War Major)</td>
+    <td>Melinda Jane Evans</td>
+</tr>
+<tr>
+    <td>Mrs.</td>
+    <td>Mary</td>
+    <td>Montgomery</td>
+    <td>Clarke</td>
+    <td>Daughter of William Haymond Clarke and Melinda Jane Evans</td>
+    <td>Walter Scott Montgomery</td>
+</tr>
+<tr>
+    <td>Mrs.</td>
+    <td>Ruth</td>
+    <td>Sexton</td>
+    <td>Montgomery</td>
+    <td>Daughter of Mary Clarke Montgomery and Walter Scott Montgomery</td>
+    <td>Horatio Clay Sexton, Captain, USN , WWI & WWII</td>
+</tr>
+<tr>
+    <td>Mrs.</td>
+    <td>Mary</td>
+    <td>Brooks</td>
+    <td>Sexton</td>
+    <td>Daughter of Ruth Montgomery Sexton and Captain Horatio Clay Sexton</td>
+    <td>Charles Ambrose Brooks, Captain, USAF, WWII</td>
+</tr>
+<tr>
+    <td></td>
+    <td>Daniel</td>
+    <td>Brooks</td>
+    <td></td>
+    <td>Son of Mary Sexton Brooks and Captian Charles Ambrose Brooks</td>
+    <td>Marlene Duchesneau Brooks</td>
+</tr>
+<tr>
+    <td>SSG, USA</td>
+    <td>Andrew</td>
+    <td>Brooks</td>
+    <td></td>
+    <td>Son of Daniel Brooks and Marlene Duchesneau Brooks</td>
+    <td></td>
+</tr>
+</table>
 </body>
 </html>
